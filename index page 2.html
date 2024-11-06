@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pizzaria</title>
+</head>
+<body>
+    <div class="first-section">
+        <div class="conteudo-principal">
+            <h1>Bem-vindo à Pizzaria</h1>
+            <h2>Faça seu pedido!</h2>
+            <div class="btn">
+                <button class="pedir" onclick="openSizeSelection()">Pedir Pizza</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="sizeSelection" class="modal">
+        <div class="modal-content">
+            <h2>Escolha o tamanho da pizza</h2>
+            <button onclick="selectPizzaSize(6)">6 fatias</button>
+            <button onclick="selectPizzaSize(8)">8 fatias</button>
+            <button onclick="selectPizzaSize(12)">12 fatias</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    
+    <div id="flavorSelection" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Escolha até 2 sabores para sua pizza</h2>
+            <div>
+                <button onclick="addFlavor('Mussarela')">Mussarela</button>
+                <button onclick="addFlavor('Calabresa')">Calabresa</button>
+                <button onclick="addFlavor('Frango')">Frango</button>
+                <button onclick="addFlavor('Quatro Queijos')">Quatro Queijos</button>
+                <button onclick="addFlavor('Portuguesa')">Portuguesa</button>
+                <button onclick="addFlavor('Strogonoff')">Strogonoff</button>
+                <button onclick="addFlavor('Chocolate')">Chocolate</button>
+                <button onclick="addFlavor('Sensação')">Sensação</button>
+                <button onclick="addFlavor('Confete')">Confete</button>
+                <button onclick="addFlavor('Prestigio')">Prestigio</button>
+            </div>
+            <button onclick="nextToDetails()">Próximo</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    
+    <div id="finalStep" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Insira seus dados</h2>
+            <input type="text" id="name" placeholder="Nome">
+            <input type="text" id="address" placeholder="Endereço">
+            <input type="text" id="phone" placeholder="Número de telefone">
+            <button onclick="sendOrder()">Enviar Pedido</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
